@@ -1,18 +1,16 @@
-import './App.css'
-import SearchForm from './components/SearchForm'
+import React from 'react';
+import SearchForm from './components/SearchForm';
+import MovieList from './components/MovieList';
+import './App.css';
 
 function App() {
-
-  const onSearch = (query)=>{
-    console.log(query)
-  }
-
   return (
-      <div className='App'>
-        <h1>Movie Search App</h1>
-        <SearchForm onSearch={onSearch}></SearchForm>
-      </div>
-  )
+    <div className="App">
+      <h1>Movie Search App</h1>
+      <SearchForm />
+      <MovieList />
+    </div>
+  );
 }
 
-export default App
+export default App;
