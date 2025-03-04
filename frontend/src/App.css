@@ -1,42 +1,134 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Base Styles */
+html {
+  font-size: 10px; /* Base font size for rem units */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  box-sizing: border-box; /* Include padding and border in element dimensions */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244, 244, 244); /* Light gray background */
+  color: #333; /* Dark gray text color */
+  font-family: Arial, sans-serif; /* Default font */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Container */
+.container {
+  max-width: 1000px; /* Limit the container width */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+}
+
+/* Title */
+.title {
+  font-size: 4.4rem; /* Large font size */
+  text-align: center; /* Center the text */
+  margin: 2rem 0; /* Add space above and below */
+  color: #333; /* Dark gray text color */
+}
+
+/* Search Form */
+.form {
+  display: grid;
+  gap: 1rem; /* Space between form elements */
+  max-width: 600px; /* Limit form width */
+  margin: 2rem auto; /* Center the form */
+  padding: 1rem; /* Add some padding */
+}
+
+.label {
+  font-size: 1.2rem; /* Small font size for the label */
+  text-transform: uppercase; /* Uppercase text */
+  margin-bottom: 0.5rem; /* Space below the label */
+}
+
+.input {
+  font-size: 1.6rem; /* Medium font size for the input */
+  padding: 0.5rem 1rem; /* Padding inside the input */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 20px; /* Rounded corners */
+  outline: none; /* Remove default focus outline */
+}
+
+.input:focus {
+  border-color: #333; /* Darker border on focus */
+}
+
+.button {
+  font-size: 1.4rem; /* Medium font size for the button */
+  padding: 0.5rem 1rem; /* Padding inside the button */
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.85); /* Darker background on hover */
+}
+
+/* Movie List */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+  margin-top: 2rem; /* Space above the movie list */
 }
 
 .card {
-  padding: 2em;
+  background-color: white; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensures content stays within the card */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.card--image {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below the image */
+}
+
+.card--content {
+  padding: 1.5rem; /* Padding inside the card */
+}
+
+.card--title {
+  font-size: 2rem; /* Large font size for the title */
+  margin: 0 0 1rem; /* Space below the title */
+  color: #333; /* Dark gray text color */
+}
+
+.card--desc {
+  font-size: 1.4rem; /* Medium font size for the overview */
+  color: #666; /* Light gray text color */
+  line-height: 1.5; /* Improve readability */
+}
+
+.card--details {
+  font-size: 1.2rem; /* Small font size for details */
+  color: #888; /* Light gray text color */
+  margin: 0.5rem 0; /* Space above and below */
+}
+
+/* No Movies Message */
+.no-movies {
+  text-align: center; /* Center the text */
+  font-size: 1.6rem; /* Match the font size */
+  color: #666; /* Light gray text color */
+  margin-top: 2rem; /* Add space above the message */
+  grid-column: 1 / -1; /* Span across all columns */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }

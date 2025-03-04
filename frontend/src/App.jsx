@@ -31,8 +31,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Movie Search App</h1>
+    <div className="container">
+      <h1 className='title'>Movie Search App</h1>
       <SearchForm onSearch={onSearch} />
       {
         loading ? 
