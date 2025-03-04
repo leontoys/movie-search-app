@@ -9,7 +9,10 @@ function App() {
   const [loading,setLoading] = useState(false) //for loading status
  
   const onSearch = async (query) => {
-    if(!query) return
+    if(!query) {
+      setMovies([])
+      return
+    }
 
     setLoading(true) //we are querying - starts loading
     const apiKey = import.meta.env.VITE_TMDB_API_KEY
