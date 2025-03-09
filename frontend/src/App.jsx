@@ -3,7 +3,7 @@ import SearchForm from './components/SearchForm';
 import MovieList from './components/MovieList';
 import './App.css';
 
-function App() {
+function App() {  
 
   const [movies,setMovies] = useState([])
   const [loading,setLoading] = useState(false) //for loading status
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className='title'>Movie Search App</h1>
+      <h1 className='title'>Movie DB Search</h1>
       <SearchForm onSearch={onSearch} />
       {
         loading ? 
